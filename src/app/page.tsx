@@ -13,7 +13,10 @@ export default function Page() {
     <div className="relative z-10">
       <Navbar />
       <main className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
-        <section id="home" className="py-24">
+        <section
+          id="home"
+          className="min-h-screen flex items-center justify-center"
+        >
           <Hero />
         </section>
 

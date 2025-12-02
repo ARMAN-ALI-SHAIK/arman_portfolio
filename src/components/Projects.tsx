@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import Image from "next/image";
 import SectionHeader from "./SectionHeader";
 import { motion } from "framer-motion";
 
@@ -9,21 +10,28 @@ const projects = [
     desc: "A full-stack employee management and attrition monitoring platform using MERN stack, Tailwind CSS, and ShadCN UI, integrated with a Flask ML microservice (Scikit-learn + SHAP).",
     tech: ["React", "Node.js", "MongoDB", "Jenkins", "Docker"],
     github: "https://github.com/Morningstar-08/employee360",
-    image: "/projects/employee360.jpg",
+    image: "/projects/employee360.png",
+  },
+  {
+    title: "AI Fitness Assistant – FitBotics",
+    desc: "An intelligent fitness companion powered by AI that provides personalized workout recommendations, form analysis, and progress tracking using machine learning algorithms.",
+    tech: ["Python", "AI/ML", "Computer Vision", "TensorFlow", "Flask"],
+    github: "https://github.com/Morningstar-08/fitbotics",
+    image: "/projects/fitbotics.png",
   },
   {
     title: "FITNUS – Fitness Tracking System",
     desc: "A fitness tracker with IoT devices (Arduino IDE) and a web dashboard using HTML, CSS, and Python to monitor workout history.",
     tech: ["HTML", "CSS", "Python", "Arduino IDE", "MySQL"],
     github: "https://github.com/ARMAN-ALI-SHAIK/AimingFitNUs",
-    image: "/projects/fitnus.png",
+    image: "/projects/fitnuss.png",
   },
   {
     title: "TABY – Collaborative Virtual Pet Web Game",
     desc: "Browser-based real-time co-parenting game using HTML, CSS, JavaScript, Node.js, and MySQL, featuring secure login, co-parenting, pet emotion tracking, and an infinite inventory system.",
     tech: ["HTML", "CSS", "JavaScript", "Node.js", "MySQL"],
     github: "https://github.com/potatohoo/Taby-game",
-    image: "/projects/taby.jpg",
+    image: "/projects/taby.png",
   },
   {
     title: "R & D Project: Scalable Intrusion Detection Solutions",
@@ -49,15 +57,19 @@ export default function Projects() {
             key={p.title}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ delay: i * 0.1 }}
+            whileHover={{ scale: 1.02, y: -8 }}
+            transition={{ type: "spring", stiffness: 300, delay: i * 0.1 }}
             viewport={{ once: true }}
-            className="glass-card rounded-xl overflow-hidden hover:bg-white/5 transition-all group"
+            className="glass-card rounded-xl overflow-hidden hover:bg-white/10 transition-all group cursor-pointer"
           >
             <div className="aspect-video bg-gradient-to-br from-cyan-500/10 to-purple-600/10 relative overflow-hidden">
-              {/* Placeholder for project image */}
-              <div className="absolute inset-0 flex items-center justify-center text-slate-500">
-                <span className="text-4xl">📁</span>
-              </div>
+              <Image
+                src={p.image}
+                alt={p.title}
+                fill
+                className="object-cover group-hover:scale-105 transition-transform duration-500"
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              />
             </div>
 
             <div className="p-6">

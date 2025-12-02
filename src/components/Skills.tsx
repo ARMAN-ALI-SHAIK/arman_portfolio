@@ -62,9 +62,10 @@ export default function Skills() {
             key={category.title}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ delay: i * 0.1 }}
+            whileHover={{ scale: 1.03, y: -8 }}
+            transition={{ type: "spring", stiffness: 300, delay: i * 0.1 }}
             viewport={{ once: true }}
-            className="glass-card p-6 rounded-xl hover:bg-white/5 transition-all"
+            className="glass-card p-6 rounded-xl hover:bg-white/10 transition-all cursor-pointer"
           >
             <div className="flex items-center gap-3 mb-4">
               <span className="text-3xl">{category.icon}</span>

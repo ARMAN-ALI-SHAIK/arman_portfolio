@@ -34,8 +34,8 @@ function ModelWrapper() {
     <primitive
       ref={ref}
       object={gltf.scene}
-      scale={1}
-      position={[0, -0.9, 0]}
+      scale={1.2}
+      position={[0, -1.2, 0]}
     />
   );
 }

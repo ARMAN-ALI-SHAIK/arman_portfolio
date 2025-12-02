@@ -23,6 +23,14 @@ export default function Hero() {
               Shaik Arman Ali
             </h1>
 
+            <p className="mt-6 text-lg sm:text-xl text-slate-300 leading-relaxed">
+              Computer Science Student & Full-Stack Developer
+              <br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
+                Building innovative solutions with modern technologies
+              </span>
+            </p>
+
             <div className="mt-8 flex items-center gap-4">
               <a
                 href="/Shaik_Arman_Ali_CV.pdf"
